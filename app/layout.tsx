@@ -37,10 +37,14 @@ export default function RootLayout({
           >
             <Header />
             <main className="flex-1">{children}</main>
-            <footer>
-              <div className="container mx-auto py-2">
-                <p className="text-center text-gray-200 italic">
+            <footer className="bg-background border-t border-border mt-20">
+              <div className="container mx-auto px-4 py-6 flex flex-col items-center justify-center space-y-2 text-center">
+                <p className="text-sm text-muted-foreground italic">
                   Helping you make career moves that matter.
+                </p>
+                <p className="text-xs text-muted-foreground/70">
+                  © {new Date().getFullYear()} KairoHire.ai. All rights
+                  reserved.
                 </p>
               </div>
             </footer>

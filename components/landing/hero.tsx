@@ -27,15 +27,15 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section className="w-ful pt-36 md:pt-48 pb-10">
+    <section className="w-ful pt-36 md:pt-48 pb-10 px-4 sm:px-0">
       <div className="space-y-6 text-center">
         <div className="space-y-6 mx-auto">
-          <h1 className="gradient-title text-5xl font-bold md:text-6xl lg:text-7xl xl:text-8xl">
-            Your AI Career Coach for <br /> Professional Success
+          <h1 className="gradient-title text-4xl font-bold md:text-5xl lg:text-6xl xl:text-7xl">
+            Your AI Career Companion <br /> Where Algorithms Meet Ambition
           </h1>
           <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl">
-            Advance your career with personalized guidance, interview prep, and
-            AI-powered tools for job success.
+            Smarter tools. Sharper moves. Designed to help you act when the
+            moment’s right — that’s the Kairo way.
           </p>
         </div>
         <div className="flex justify-center space-x-4">

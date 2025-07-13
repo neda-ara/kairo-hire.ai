@@ -14,7 +14,7 @@ import {
 } from "./ui/dropdown-menu";
 import { Button } from "./ui/button";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
-import { verifyUser } from "@/lib/verifyUser";
+import { verifyUser } from "@/lib/helpers/verifyUser";
 import Image from "next/image";
 import Link from "next/link";
 

@@ -5,6 +5,7 @@ import { Header } from "@/components/header";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
+import { Toaster } from "sonner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -37,6 +38,7 @@ export default function RootLayout({
           >
             <Header />
             <main className="flex-1">{children}</main>
+            <Toaster richColors />
             <footer className="bg-background border-t border-border mt-20">
               <div className="container mx-auto px-4 py-6 flex flex-col items-center justify-center space-y-2 text-center">
                 <p className="text-sm text-muted-foreground italic">

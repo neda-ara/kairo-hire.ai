@@ -67,7 +67,7 @@ export async function updateUser(data: any) {
       }
     );
 
-    return result.user;
+    return { success: true, ...result };
   } catch (error) {
     console.log(error);
     throw new Error("Failed to update user profile");

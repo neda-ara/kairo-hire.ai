@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-const Authayout = ({ children }: { children: ReactNode }) => {
+const AuthLayout = ({ children }: { children: ReactNode }) => {
   return (
     <div className="flex justify-center items-center min-h-screen">
       {children}
@@ -8,4 +8,4 @@ const Authayout = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export default Authayout;
+export default AuthLayout;

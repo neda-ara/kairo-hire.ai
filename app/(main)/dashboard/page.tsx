@@ -8,5 +8,5 @@ export default async function IndustryInsightsPage() {
     redirect("/onboarding");
   }
 
-  return <div></div>;
+  return <div>YOOOO</div>;
 }

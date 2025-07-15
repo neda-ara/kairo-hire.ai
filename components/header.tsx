@@ -28,7 +28,7 @@ export const Header = async () => {
           <Image
             src="/assets/logo.svg"
             alt="KairoHire.ai"
-            width={200}
+            width={240}
             height={60}
             className="h-12 py-1 w-auto object-contain"
           />

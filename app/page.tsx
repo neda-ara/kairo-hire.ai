@@ -6,6 +6,7 @@ import { Testimonials } from "@/components/landing/testimonials";
 import { Workflow } from "@/components/landing/workflow";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
       <FrequentlyAskedQuestions />
 
       <section className="w-full px-4 sm:px-0">
-        <div className="mx-auto px-4 py-24 bg-gradient-to-br from-zinc-900 via-neutral-800 to-zinc-700 rounded-2xl shadow-xl max-w-5xl">
+        <div className="mx-auto px-4 pt-24 pb-16 bg-gradient-to-br from-zinc-900 via-neutral-800 to-zinc-700 rounded-2xl shadow-xl max-w-5xl">
           <div className="flex flex-col items-center justify-center space-y-4 text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl md:text-5xl">
               Ready to Accelerate Your Career?
@@ -29,6 +30,14 @@ export default function Home() {
               Join thousands of professionals who are advancing their careers
               with AI-powered guidance.
             </p>
+            <Image
+              src="/assets/robo-guide.png"
+              width={175}
+              height={175}
+              alt="RoboCoach"
+              className="max-w-full rounded-full"
+              priority
+            />
             <Link href="/dashboard" passHref>
               <Button
                 size={"lg"}

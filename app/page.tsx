@@ -1,11 +1,12 @@
-import { FrequentlyAskedQuestions } from "@/components/landing/faqs";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Features } from "@/components/landing/features";
+import { FrequentlyAskedQuestions } from "@/components/landing/faqs";
 import { HeroSection } from "@/components/landing/hero";
+import { ROUTES } from "@/lib/helpers/constants";
 import { Statistics } from "@/components/landing/statistics";
 import { Testimonials } from "@/components/landing/testimonials";
 import { Workflow } from "@/components/landing/workflow";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -38,7 +39,7 @@ export default function Home() {
               className="max-w-full rounded-full"
               priority
             />
-            <Link href="/dashboard" passHref>
+            <Link href={ROUTES.DASHBOARD} passHref>
               <Button
                 size={"lg"}
                 variant={"outline"}

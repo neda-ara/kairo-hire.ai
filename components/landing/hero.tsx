@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "../ui/button";
+import { ROUTES } from "@/lib/helpers/constants";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -39,7 +40,7 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className="flex justify-center space-x-4">
-          <Link href="/dashboard">
+          <Link href={ROUTES.DASHBOARD}>
             <Button size="lg" className="px-8">
               Get Started
             </Button>

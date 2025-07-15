@@ -14,20 +14,21 @@ import {
   SelectValue,
   SelectContent,
 } from "../ui/select";
+import { Button } from "../ui/button";
 import { industries, Industry } from "@/lib/data/industries";
+import { Input } from "../ui/input";
+import { Label } from "../ui/label";
+import { Loader2 } from "lucide-react";
 import { onboardingInputSchema } from "@/lib/schema/onboardingSchema";
+import { ROUTES } from "@/lib/helpers/constants";
+import { Textarea } from "../ui/textarea";
+import { toast } from "sonner";
+import { updateUser } from "@/actions/user";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
-import { Textarea } from "../ui/textarea";
-import { Button } from "../ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import useFetch from "@/hooks/useFetch";
-import { updateUser } from "@/actions/user";
-import { toast } from "sonner";
-import { Loader2 } from "lucide-react";
 
 const ErrorMessage = ({ errorMessage }: { errorMessage: string }) => {
   return errorMessage && <p className="text-sm text-red-500">{errorMessage}</p>;
@@ -78,7 +79,7 @@ export const OnboardingForm = () => {
   useEffect(() => {
     if (updatedUser?.success && !loading) {
       toast.success("Profile updated successfully");
-      router.push("/dashboard");
+      router.push(ROUTES.DASHBOARD);
       router.refresh();
     }
   }, [loading, updatedUser]);

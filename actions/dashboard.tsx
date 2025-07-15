@@ -53,5 +53,5 @@ export async function getIndustryInsights() {
     return industryInsights;
   }
 
-  return !user.industryInsight;
+  return user.industryInsight;
 }

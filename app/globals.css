@@ -170,3 +170,7 @@
   transition: transform 0.5s ease-out;
   will-change: transform;
 }
+
+.recharts-surface:focus {
+  outline: 0;
+}

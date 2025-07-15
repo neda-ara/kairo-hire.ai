@@ -21,7 +21,7 @@ export default function Home() {
       <Testimonials />
       <FrequentlyAskedQuestions />
 
-      <section className="w-full px-4 sm:px-0">
+      <section className="w-full px-4 sm:px-0 my-20">
         <div className="mx-auto px-4 pt-24 pb-16 bg-gradient-to-br from-zinc-900 via-neutral-800 to-zinc-700 rounded-2xl shadow-xl max-w-5xl">
           <div className="flex flex-col items-center justify-center space-y-4 text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl md:text-5xl">

@@ -39,7 +39,7 @@ export default function RootLayout({
             <Header />
             <main className="flex-1">{children}</main>
             <Toaster richColors />
-            <footer className="bg-background border-t border-border mt-20">
+            <footer className="bg-background border-t border-border">
               <div className="container mx-auto px-4 py-6 flex flex-col items-center justify-center space-y-2 text-center">
                 <p className="text-sm text-muted-foreground italic">
                   Helping you make career moves that matter.

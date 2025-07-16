@@ -1,10 +1,11 @@
 "use server";
 
+import { cleanText } from "@/lib/helpers/helpers";
 import { db } from "@/lib/prisma";
 import { DemandLevel, MarketOutlook } from "@/lib/generated/prisma";
+import { getIndustryInsightPrompt } from "@/lib/helpers/getPrompts";
 import { getLoggedInUser } from "./user";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { getIndustryInsightPrompt } from "@/lib/helpers/getPrompts";
 
 export type AIGeneratedInsights = {
   salaryRanges: any[];
@@ -31,7 +32,7 @@ export const generateInsights = async (
   const prompt = getIndustryInsightPrompt(industry);
   const result = await model.generateContent(prompt);
   const responseText = result.response.text();
-  const cleanResponseText = responseText.replace(/```(?:json)?\n?/g, "").trim();
+  const cleanResponseText = cleanText(responseText);
 
   return JSON.parse(cleanResponseText) as AIGeneratedInsights;
 };

@@ -1,6 +1,6 @@
 "use client";
 
-import { formatNumber } from "@/lib/helpers/formatNumber";
+import { formatNumber } from "@/lib/helpers/helpers";
 import { useEffect, useRef, useState } from "react";
 
 type AnimatedCounterProps = {

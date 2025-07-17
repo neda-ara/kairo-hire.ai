@@ -25,3 +25,51 @@ Return only valid JSON that conforms exactly to this structure:
 
 The output should be ready for direct parsing as JSON.
 `;
+
+export const getInterviewQuestionsPrompt = (
+  industry: string,
+  skills?: string[]
+) => `
+You are an experienced professional and interviewer knowledgeable in the ${industry} industry${
+  skills?.length ? `, with expertise in ${skills.join(", ")}` : ""
+}.
+
+Create exactly 10 multiple-choice interview questions that closely follow the style, format, and level of difficulty of actual interview questions previously asked in this field${
+  skills?.length ? `, especially focusing on ${skills.join(", ")}` : ""
+}.
+
+These questions should reflect real-world interviewing patterns, including common traps, tricky wording, and scenarios interviewers typically use to assess candidates’ depth of knowledge.
+
+Each question should be clear, challenging yet fair, and represent current industry standards, trends, and best practices.
+
+For each question, provide:
+- "question": a precise, relevant question
+- "options": an array of 4 plausible answer choices
+- "correctAnswer": the exact string from the options that is correct
+- "explanation": a concise, informative explanation of why the correct answer is right
+
+Return strictly valid, parsable JSON with no additional commentary or formatting:
+
+{
+  "questions": [
+    {
+      "question": "string",
+      "options": ["string", "string", "string", "string"],
+      "correctAnswer": "string",
+      "explanation": "string"
+    }
+  ]
+}
+`;
+
+export const getImprovementTipPrompt = (
+  industry: string,
+  wrongQuestionsContext: string
+) =>
+  `The user answered the following ${industry} technical interview questions incorrectly:
+
+${wrongQuestionsContext}
+
+Based on this, provide one clear and encouraging improvement tip focused on the knowledge areas the user should strengthen.
+Avoid referencing the questions or mistakes directly. Instead, highlight what concepts or skills to focus on.
+Limit the response to 1-2 concise sentences. No extra preamble or commentary apart from improvement tip is required.`;

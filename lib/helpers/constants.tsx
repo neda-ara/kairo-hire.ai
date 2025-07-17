@@ -4,6 +4,7 @@ export const ROUTES = {
   COVER_LETTER: "cover-letter",
   DASHBOARD: "/dashboard",
   INTERVIEW: "/interview",
+  MOCK_INTERVIEW: "/interview/mock",
   ONBOARDING: "/onboarding",
   RESUME: "/resume",
 };
